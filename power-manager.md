@@ -1,13 +1,14 @@
 `
 ```
-xfconf-query -c xfce4-power-manager \
-  -p /xfce4-power-manager/lid-action-on-ac -n -t uint -s 1
-xfconf-query -c xfce4-power-manager \
-  -p /xfce4-power-manager/lid-action-on-battery -n -t uint -s 1
-xfconf-query -c xfce4-power-manager \
-  -p /xfce4-power-manager/logind-handle-lid-switch -n -t bool -s true
-xfconf-query -c xfce4-power-manager \
-  -p /xfce4-power-manager/show-panel-label -n -t int -s 0
+power_set() { xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/"$1" -n -t "$2" -s "$3" ; }
+
+power_set lid-action-on-ac int 1
+power_set lid-action-on-battery int 1
+power_set logind-handle-lid-switch bool true
+power_set show-panel-label int 0
+power_set show-tray-icon bool true
+power_set general-notification bool true
+
 
 exit
 ```
