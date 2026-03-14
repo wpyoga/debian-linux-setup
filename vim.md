@@ -1,16 +1,7 @@
 `
 ```
-# the default vim installed is vim.tiny
-
-grep -q '^ *source /etc/vim/vimrc.local *$' /etc/vim/vimrc.tiny ||
-sudo tee -a /etc/vim/vimrc.tiny >/dev/null <<EOF
-
-runtime! debian.vim
-" load local customizations
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
-endif
-EOF
+# use regular vim for syntax highlighting and more
+sudo apt install --autoremove vim vim-tiny-
 
 sudo tee /etc/vim/vimrc.local >/dev/null <<EOF
 runtime! defaults.vim
@@ -21,7 +12,6 @@ set paste
 set ruler
 set nocompatible
 EOF
-
 
 exit
 ```
