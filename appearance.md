@@ -1,17 +1,22 @@
 `
 ```
-xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita"
-xfconf-query -c xsettings -p /Net/IconThemeName -s "HighContrast"
+xf_set() { xfconf-query -c xsettings -p "$1" -n -t "$2" -s "$3" ; }
 
-xfconf-query -c xsettings -p /Xft/DPI -n -s 96
-xfconf-query -c xsettings -p /Xft/Antialias -s 1
-xfconf-query -c xsettings -p /Xft/Hinting -s 1
-xfconf-query -c xsettings -p /Xft/HintStyle -s "hintfull"
-xfconf-query -c xsettings -p /Xft/RGBA -s "rgb"
+xf_set /Net/ThemeName string "Adwaita"
+xf_set /Net/IconThemeName string "HighContrast"
 
-xfconf-query -c xsettings -p /Gtk/CanChangeAccels -s false
-xfconf-query -c xsettings -p /Gtk/FontName -s "Liberation Sans 10.5"
-xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "Noto Sans Mono 10"
+xf_set /Xft/Antialias int 1
+xf_set /Xft/DPI int 96
+xf_set /Xft/Hinting int 1
+#xf_set /Xft/HintStyle string "hintfull"
+xf_set /Xft/HintStyle string "hintslight"
+xf_set /Xft/RGBA string "rgb"
+
+xf_set /Gtk/CanChangeAccels bool false
+xf_set /Gtk/FontName string "Liberation Sans 10.5"
+xf_set /Gtk/MonospaceFontName string "Noto Sans Mono 10"
+
+kill `pidof xfwm4`
 
 exit
 ```
