@@ -1,16 +1,22 @@
 `
 ```
-xfconf-query -c xfwm4 -p /general/button_layout -n -t string -s "O|HMC"
-xfconf-query -c xfwm4 -p /general/title_font -n -t string -s "Noto Sans Bold 10.5"
+wm_set() { xfconf-query -c xfwm4 -p /general/"$1" -n -t "$2" -s "$3" ; }
 
-xfconf-query -c xfwm4 -p /general/snap_to_windows -n -t bool -s true
 
-xfconf-query -c xfwm4 -p /general/scroll_workspaces -n -t bool -s false
-xfconf-query -c xfwm4 -p /general/wrap_cycle -n -t bool -s false
-xfconf-query -c xfwm4 -p /general/wrap_layout -n -t bool -s false
-xfconf-query -c xfwm4 -p /general/wrap_windows -n -t bool -s false
 
-xfconf-query -c xfwm4 -p /general/raise_with_any_button -n -t bool -s false
+wm_set button_layout string "O|HMC"
+wm_set title_font string "Noto Sans Bold 10.5"
+
+wm_set snap_to_windows bool true
+
+wm_set scroll_workspaces bool false
+wm_set wrap_cycle bool false
+wm_set wrap_layout bool false
+wm_set wrap_windows bool false
+
+wm_set raise_with_any_button bool false
+
+kill `pidof xfwm4`
 
 exit
 ```
