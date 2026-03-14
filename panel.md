@@ -57,14 +57,17 @@ panel_plugin 99 pager
 
 panel_separator 98 false 0
 
-panel_plugin 31 systray
-panel_plugin_opt 31 hide-new-items bool false
-panel_plugin_opt 31 single-row bool true
-panel_plugin_opt 31 square-icons bool true
+panel_plugin 31 pulseaudio
+panel_plugin_opt 31 enable-keyboard-shortcuts bool true
 
-panel_plugin 32 clock
+panel_plugin 32 systray
+panel_plugin_opt 32 hide-new-items bool false
+panel_plugin_opt 32 single-row bool true
+panel_plugin_opt 32 square-icons bool true
 
-panel_plugin 33 showdesktop
+panel_plugin 33 clock
+
+panel_plugin 34 showdesktop
 
 # now we create the plugin array
 xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids -n \
