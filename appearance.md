@@ -16,6 +16,12 @@ xf_set /Gtk/CanChangeAccels bool false
 xf_set /Gtk/FontName string "Liberation Sans 10.5"
 xf_set /Gtk/MonospaceFontName string "Noto Sans Mono 10"
 
+while IFS= read -r LINE; do
+  grep -qs -xF "$LINE" ~/.config/gtk-3.0/gtk.css || echo "$LINE" >> ~/.config/gtk-3.0/gtk.css
+done <<"EOF"
+* { outline-width: 2px; }
+EOF
+
 kill `pidof xfwm4`
 
 exit
