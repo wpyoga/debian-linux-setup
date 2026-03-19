@@ -1,8 +1,10 @@
 
 ## high suspend power consumption
 
-the battery lost 14840 mWh within 23 hours
+with s2idle, the battery lost 14840 mWh within 23 hours
 which means 645 mW
+
+with deep sleep, the power consumption is 860 mW
 
 ## deep sleep: late time sync
 
