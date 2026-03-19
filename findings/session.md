@@ -10,4 +10,8 @@ there is an issue after locking:
 - need to press a key once more, then the unlock dialog is shown
 - must enter username every time we go back from sleep
 
+## xfce4-session-logout
+
+- intially does not show focus on Log Out button, but it is the default or focused button
+
 
