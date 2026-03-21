@@ -1,6 +1,6 @@
 `
 ```
-sudo apt install git
+sudo apt install -y git
 git config --global init.defaultBranch master
 
 exit

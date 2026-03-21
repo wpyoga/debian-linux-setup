@@ -1,6 +1,6 @@
 `
 ```
-sudo apt install xcape
+sudo apt install -y xcape
 
 xfconf-query -c xfce4-keyboard-shortcuts -p '/commands/custom/<Primary>Escape' -r
 xfconf-query -c xfce4-keyboard-shortcuts -p '/commands/custom/<Primary><Alt>Escape' -r
