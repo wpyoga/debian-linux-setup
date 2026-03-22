@@ -1,6 +1,6 @@
 `
 ```
-sudo apt install -y smartmontools
+sudo apt install -y smartmontools iotop screen
 
 
 

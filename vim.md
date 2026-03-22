@@ -1,7 +1,7 @@
 `
 ```
 # use regular vim for syntax highlighting and more
-sudo apt install -y --autoremove vim vim-tiny-
+sudo apt install -y --purge --autoremove vim vim-tiny-
 
 sudo tee /etc/vim/vimrc.local >/dev/null <<EOF
 runtime! defaults.vim

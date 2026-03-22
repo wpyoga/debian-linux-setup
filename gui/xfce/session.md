@@ -1,6 +1,6 @@
 `
 ```
-sudo apt install --autoremove -y xfce4-screensaver light-locker-
+sudo apt install -y --purge --autoremove xfce4-screensaver light-locker-
 
 exit
 ```
