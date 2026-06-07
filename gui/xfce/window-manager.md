@@ -16,6 +16,8 @@ wm_set wrap_windows bool false
 
 wm_set raise_with_any_button bool false
 
+wm_set workspace_count int 1
+
 kill `pidof xfwm4`
 
 exit
