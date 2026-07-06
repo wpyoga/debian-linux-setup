@@ -9,6 +9,6 @@
 
 ## post-install
 
-git.md
+[git.md](git.md)
 
 
