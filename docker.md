@@ -13,7 +13,7 @@ EOF
 sudo apt update
 sudo apt install -y docker-ce
 
-echo add user to group: sudo usermod -aG docker $(whoami)
+sudo usermod -aG docker $(whoami)
 
 exit
 ```
