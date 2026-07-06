@@ -32,16 +32,16 @@ panel_plugin_opt 1 position-categories-alternate bool true
 panel_plugin_opt 1 position-search-alternate bool true
 panel_plugin_opt 1 show-button-title bool true
 
-panel_separator 9 false 0
+panel_plugin 11 showdesktop
 
-panel_launcher 11 xfce4-web-browser.desktop
+panel_launcher 12 xfce4-web-browser.desktop
 
-panel_launcher 12 xfce4-terminal-emulator.desktop
+panel_launcher 13 xfce4-terminal-emulator.desktop
 
-panel_launcher 13 xfce4-file-manager.desktop
+panel_launcher 14 xfce4-file-manager.desktop
 
-panel_plugin 14 directorymenu
-panel_plugin_opt 14 base-directory string "$HOME"
+panel_plugin 15 directorymenu
+panel_plugin_opt 15 base-directory string "$HOME"
 
 panel_plugin 21 tasklist
 panel_plugin_opt 21 flat-buttons bool false
@@ -53,10 +53,6 @@ panel_plugin_opt 21 window-scrolling bool false
 
 panel_separator 29 true 0
 
-panel_plugin 99 pager
-
-panel_separator 98 false 0
-
 panel_plugin 31 pulseaudio
 panel_plugin_opt 31 enable-keyboard-shortcuts bool true
 
@@ -66,8 +62,6 @@ panel_plugin_opt 32 single-row bool true
 panel_plugin_opt 32 square-icons bool true
 
 panel_plugin 33 clock
-
-panel_plugin 34 showdesktop
 
 # now we create the plugin array
 xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids -n \
@@ -79,5 +73,4 @@ pidof xfce4-panel 2>&1 >/dev/null \
 
 exit
 ```
-
 
