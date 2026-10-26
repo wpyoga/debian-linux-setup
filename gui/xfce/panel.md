@@ -53,6 +53,10 @@ panel_plugin_opt 21 window-scrolling bool false
 
 panel_separator 29 true 0
 
+#panel_plugin 99 pager
+
+#panel_separator 98 false 0
+
 panel_plugin 31 pulseaudio
 panel_plugin_opt 31 enable-keyboard-shortcuts bool true
 
