@@ -12,8 +12,8 @@ sudo sed -e 's,^deb-src,#deb-src,' -i /etc/apt/sources.list
 
 . /etc/os-release
 
-sudo tee /etc/apt/sources.list.d/"$VERSION_CODENAME"-backports.list <<EOF
-deb http://deb.debian.org/debian "$VERSION_CODENAME"-backports main contrib non-free non-free-firmware
+sudo tee /etc/apt/sources.list.d/backports.list <<EOF
+deb http://deb.debian.org/debian $VERSION_CODENAME-backports main contrib non-free non-free-firmware
 EOF
 
 sudo apt update
