@@ -12,6 +12,6 @@ there is an issue after locking:
 
 ## xfce4-session-logout
 
-- intially does not show focus on Log Out button, but it is the default or focused button
+- intially does not show focus on Log Out button, yet it is the default or focused button
 
 
