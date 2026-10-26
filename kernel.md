@@ -7,7 +7,7 @@ deb http://deb.debian.org/debian $VERSION_CODENAME-backports main contrib non-fr
 EOF
 
 sudo tee /etc/apt/preferences.d/backports-kernel <<EOF
-Package: linux-image-amd64 linux-headers-amd64
+Package: linux-image-amd64 linux-headers-amd64 linux-base
 Pin: release n=$VERSION_CODENAME-backports
 Pin-Priority: 500
 EOF
