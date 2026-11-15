@@ -1,6 +1,6 @@
 `
 ```
-sudo apt install -y smartmontools iotop screen curl whois jq lm-sensors nvme-cli tcpdump bmon
+sudo apt install -y smartmontools iotop screen curl whois jq lm-sensors nvme-cli tcpdump bmon hexedit xxd
 
 sudo apt autopurge -y nano
 
